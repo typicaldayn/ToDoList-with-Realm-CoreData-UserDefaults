@@ -11,8 +11,6 @@ import UIKit
 class CoreDataSaver: Saver {
     
     private var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    private var perstS = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.persistentStoreCoordinator
-    let coredatar = CoreDataReturner()
     
     func saveObjects(title: String, text: String?) {
         let object = CoreDataObject(context: context)

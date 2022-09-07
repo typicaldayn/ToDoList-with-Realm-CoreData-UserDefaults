@@ -9,23 +9,30 @@ import Foundation
 
 class DefaultsSaver: Saver {
     
+    private var returner = DefaultsReturner()
     private let defaults = UserDefaults.standard
-    private var arrayOfObjects = [Data]()
+    private var arrayGet: [DefaultsModel] {
+        returner.getObjects() as! [DefaultsModel]
+    }
+    private var arraySet: Data?
     
     func delete(at index: Int) {
-        print(arrayOfObjects.count)
-        let data = arrayOfObjects[index]
         var objectToDelete: DefaultsModel?
         do {
             let decoder = JSONDecoder()
+            let encoder = JSONEncoder()
+            let data = try encoder.encode(arrayGet)
+            arraySet = data
             objectToDelete = try decoder.decode(DefaultsModel.self, from: data)
+            guard objectToDelete != nil else {return}
+            defaults.removeObject(forKey: objectToDelete!.title)
+            arraySet?.remove(at: index)
+            let arrayToSet = try decoder.decode([DefaultsModel].self, from: data)
+            defaults.set(arrayToSet as NSArray, forKey: "all")
         } catch {
             print(error.localizedDescription)
         }
-        guard objectToDelete != nil else {return}
-        defaults.removeObject(forKey: objectToDelete!.title)
-        arrayOfObjects.remove(at: index)
-        defaults.set(arrayOfObjects as NSArray, forKey: "all")
+        
     }
     
     func saveObjects(title: String, text: String?) {
@@ -33,13 +40,17 @@ class DefaultsSaver: Saver {
         var data = Data()
         do {
             let encoder = JSONEncoder()
+            let decoder = JSONDecoder()
             data = try encoder.encode(newObject)
+            arraySet?.append(data)
+            guard arraySet != nil else {return}
+            let arrayToSet = try decoder.decode([DefaultsModel].self, from: arraySet!)
+            defaults.set(text! as NSString, forKey: title)
+            defaults.set(arrayToSet as NSArray, forKey: "all")
         } catch {
             print(error.localizedDescription)
         }
-        arrayOfObjects.append(data)
-        defaults.set(text! as NSString, forKey: title)
-        defaults.set(arrayOfObjects as NSArray, forKey: "all")
+        
     }
     
 }

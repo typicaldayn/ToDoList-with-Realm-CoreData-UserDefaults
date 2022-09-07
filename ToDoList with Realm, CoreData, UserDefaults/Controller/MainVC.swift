@@ -35,9 +35,6 @@ class MainVC: UIViewController {
     
     
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
-        print(defaultsReturner.getObjects())
-        print(realmReturner.getObjects())
-        print(coreDataReturner.getObjects())
         self.present(alertConfig.createAlert(table: toDoObjectsTable), animated: true)
     }
 }
