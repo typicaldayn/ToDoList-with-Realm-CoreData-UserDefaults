@@ -17,6 +17,17 @@
 		BE73E08828C21D4C0081D98E /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = BE73E08728C21D4C0081D98E /* Realm */; };
 		BE73E08A28C21D4C0081D98E /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BE73E08928C21D4C0081D98E /* RealmSwift */; };
 		BE73E08C28C21D610081D98E /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE73E08B28C21D610081D98E /* RealmModel.swift */; };
+		BE73E08F28C21F880081D98E /* RealmSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE73E08E28C21F880081D98E /* RealmSaver.swift */; };
+		BE73E09128C21F940081D98E /* CoreDataSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE73E09028C21F940081D98E /* CoreDataSaver.swift */; };
+		BE73E09328C21F9D0081D98E /* UserDefaultsSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE73E09228C21F9D0081D98E /* UserDefaultsSaver.swift */; };
+		BE73E09628C230BF0081D98E /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE73E09528C230BF0081D98E /* Protocols.swift */; };
+		BE76810628C3915C0084EF1F /* CoreDataObject+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE76810428C3915C0084EF1F /* CoreDataObject+CoreDataClass.swift */; };
+		BE76810728C3915C0084EF1F /* CoreDataObject+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE76810528C3915C0084EF1F /* CoreDataObject+CoreDataProperties.swift */; };
+		BE76810928C3A50C0084EF1F /* CoreDataReturner.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE76810828C3A50C0084EF1F /* CoreDataReturner.swift */; };
+		BE85FEBA28C697E9008321F7 /* DefaultsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE85FEB928C697E9008321F7 /* DefaultsModel.swift */; };
+		BE85FEBC28C6999B008321F7 /* Defaults returner.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE85FEBB28C6999B008321F7 /* Defaults returner.swift */; };
+		BE9E472D28C7BF8C0055B4A9 /* Configure Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9E472C28C7BF8C0055B4A9 /* Configure Alert.swift */; };
+		BEEE28FF28C2A5EF001026E1 /* RealmReturner.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEE28FE28C2A5EF001026E1 /* RealmReturner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +41,17 @@
 		BE73E07A28C21C720081D98E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE73E07C28C21C720081D98E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE73E08B28C21D610081D98E /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
+		BE73E08E28C21F880081D98E /* RealmSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmSaver.swift; sourceTree = "<group>"; };
+		BE73E09028C21F940081D98E /* CoreDataSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataSaver.swift; sourceTree = "<group>"; };
+		BE73E09228C21F9D0081D98E /* UserDefaultsSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsSaver.swift; sourceTree = "<group>"; };
+		BE73E09528C230BF0081D98E /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		BE76810428C3915C0084EF1F /* CoreDataObject+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataObject+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BE76810528C3915C0084EF1F /* CoreDataObject+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataObject+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BE76810828C3A50C0084EF1F /* CoreDataReturner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataReturner.swift; sourceTree = "<group>"; };
+		BE85FEB928C697E9008321F7 /* DefaultsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsModel.swift; sourceTree = "<group>"; };
+		BE85FEBB28C6999B008321F7 /* Defaults returner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Defaults returner.swift"; sourceTree = "<group>"; };
+		BE9E472C28C7BF8C0055B4A9 /* Configure Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Configure Alert.swift"; sourceTree = "<group>"; };
+		BEEE28FE28C2A5EF001026E1 /* RealmReturner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmReturner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,9 +87,10 @@
 			isa = PBXGroup;
 			children = (
 				BE73E08228C21C900081D98E /* Supporting Files */,
-				BE73E08428C21CA50081D98E /* Controller */,
-				BE73E08328C21C9E0081D98E /* View */,
+				BE73E09828C232310081D98E /* Services */,
 				BE73E08528C21CAC0081D98E /* Model */,
+				BE73E08328C21C9E0081D98E /* View */,
+				BE73E08428C21CA50081D98E /* Controller */,
 			);
 			path = "ToDoList with Realm, CoreData, UserDefaults";
 			sourceTree = "<group>";
@@ -80,6 +103,7 @@
 				BE73E07728C21C720081D98E /* Assets.xcassets */,
 				BE73E07928C21C720081D98E /* LaunchScreen.storyboard */,
 				BE73E07C28C21C720081D98E /* Info.plist */,
+				BE73E09528C230BF0081D98E /* Protocols.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -88,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				BE73E07128C21C700081D98E /* Main.storyboard */,
+				BE9E472C28C7BF8C0055B4A9 /* Configure Alert.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -103,10 +128,42 @@
 		BE73E08528C21CAC0081D98E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BE76810428C3915C0084EF1F /* CoreDataObject+CoreDataClass.swift */,
+				BE76810528C3915C0084EF1F /* CoreDataObject+CoreDataProperties.swift */,
 				BE73E07428C21C700081D98E /* ToDoList_with_Realm__CoreData__UserDefaults.xcdatamodeld */,
 				BE73E08B28C21D610081D98E /* RealmModel.swift */,
+				BE85FEB928C697E9008321F7 /* DefaultsModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		BE73E08D28C21F700081D98E /* Saving Services  */ = {
+			isa = PBXGroup;
+			children = (
+				BE73E08E28C21F880081D98E /* RealmSaver.swift */,
+				BE73E09028C21F940081D98E /* CoreDataSaver.swift */,
+				BE73E09228C21F9D0081D98E /* UserDefaultsSaver.swift */,
+			);
+			path = "Saving Services ";
+			sourceTree = "<group>";
+		};
+		BE73E09728C2320B0081D98E /* Return Services */ = {
+			isa = PBXGroup;
+			children = (
+				BEEE28FE28C2A5EF001026E1 /* RealmReturner.swift */,
+				BE76810828C3A50C0084EF1F /* CoreDataReturner.swift */,
+				BE85FEBB28C6999B008321F7 /* Defaults returner.swift */,
+			);
+			path = "Return Services";
+			sourceTree = "<group>";
+		};
+		BE73E09828C232310081D98E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BE73E09728C2320B0081D98E /* Return Services */,
+				BE73E08D28C21F700081D98E /* Saving Services  */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,11 +244,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEEE28FF28C2A5EF001026E1 /* RealmReturner.swift in Sources */,
 				BE73E07028C21C700081D98E /* MainVC.swift in Sources */,
+				BE76810628C3915C0084EF1F /* CoreDataObject+CoreDataClass.swift in Sources */,
+				BE76810728C3915C0084EF1F /* CoreDataObject+CoreDataProperties.swift in Sources */,
 				BE73E06C28C21C700081D98E /* AppDelegate.swift in Sources */,
+				BE73E08F28C21F880081D98E /* RealmSaver.swift in Sources */,
+				BE73E09628C230BF0081D98E /* Protocols.swift in Sources */,
 				BE73E06E28C21C700081D98E /* SceneDelegate.swift in Sources */,
+				BE85FEBC28C6999B008321F7 /* Defaults returner.swift in Sources */,
 				BE73E08C28C21D610081D98E /* RealmModel.swift in Sources */,
+				BE9E472D28C7BF8C0055B4A9 /* Configure Alert.swift in Sources */,
+				BE73E09128C21F940081D98E /* CoreDataSaver.swift in Sources */,
+				BE76810928C3A50C0084EF1F /* CoreDataReturner.swift in Sources */,
 				BE73E07628C21C700081D98E /* ToDoList_with_Realm__CoreData__UserDefaults.xcdatamodeld in Sources */,
+				BE73E09328C21F9D0081D98E /* UserDefaultsSaver.swift in Sources */,
+				BE85FEBA28C697E9008321F7 /* DefaultsModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,6 +11,5 @@ import RealmSwift
 
 class RealmObject: Object {
     @Persisted var title: String
-    @Persisted var text: String
-    @Persisted var time: Date
+    @Persisted var text: String?
 }
